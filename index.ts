@@ -4,21 +4,23 @@ import { ok, ko, tap, fetch, optional, decodeToPromise, throwErr } from "./helpe
 (async () => {
     const People = t.interface({
         name: t.string,
-        surname: optional(t.string)
+        surname: optional(t.string),
+        sex: optional(t.union([t.literal("M"), t.literal("F")]))
+        // sex: optional(t.keyof({ M: null, F: null })) //modo alternativo
     });
 
     type IPeople = t.TypeOf<typeof People>;
 
     await ValidateAsync("good/1", People);
     await ValidateAsync("good/2", People);
-    //await Validate("good/3", People);
+    await ValidateAsync("good/3", People);
     //await Validate("good/4", People);
     //await Validate("good/5", People);
     await ValidateAsync("bad/1", People);
     await ValidateAsync("bad/2", People);
     await ValidateAsync("bad/-1", People);
     await ValidateAsync("bad/-2", People);
-    //await Validate("bad/3", People);
+    await ValidateAsync("bad/3", People);
     //await Validate("bad/4", People);
     //await Validate("bad/5", People);
 })();
