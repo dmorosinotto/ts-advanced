@@ -1,0 +1,32 @@
+{
+    "name": "ts-advanced",
+    "version": "1.0.0",
+    "description":
+        "Some experiments with advanced TS features and type-checking",
+    "private": true,
+    "main": "index.ts",
+    "dependencies": {
+        "@types/node": "^10.1.2",
+        "io-ts": "^1.1.3"
+    },
+    "devDependencies": {
+        "json-server": "^0.12.2",
+        "ts-node": "^6.0.5",
+        "typescript": "^2.8.3"
+    },
+    "scripts": {
+        "start": "json-server --watch db.json",
+        "test": "ts-node index.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dmorosinotto/ts-advanced.git"
+    },
+    "keywords": ["Typescript", "type-check"],
+    "author": "Daniele Morosinotto (d.morosinotto@icloud.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dmorosinotto/ts-advanced/issues"
+    },
+    "homepage": "https://github.com/dmorosinotto/ts-advanced#readme"
+}
