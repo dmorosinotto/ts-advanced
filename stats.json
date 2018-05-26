@@ -1,0 +1,488 @@
+{
+  "errors": [],
+  "warnings": [
+    "./main.ts\n195:18-46 Critical dependency: the request of a dependency is an expression\n    at CommonJsRequireContextDependency.getWarnings (/Users/daniele/.nvm/versions/node/v8.11.1/lib/node_modules/webpack/lib/dependencies/ContextDependency.js:40:18)\n    at Compilation.reportDependencyErrorsAndWarnings (/Users/daniele/.nvm/versions/node/v8.11.1/lib/node_modules/webpack/lib/Compilation.js:985:24)\n    at Compilation.finish (/Users/daniele/.nvm/versions/node/v8.11.1/lib/node_modules/webpack/lib/Compilation.js:817:9)\n    at hooks.make.callAsync.err (/Users/daniele/.nvm/versions/node/v8.11.1/lib/node_modules/webpack/lib/Compiler.js:479:17)\n    at _err0 (eval at create (/Users/daniele/.nvm/versions/node/v8.11.1/lib/node_modules/webpack/node_modules/tapable/lib/HookCodeFactory.js:24:12), <anonymous>:11:1)\n    at _addModuleChain (/Users/daniele/.nvm/versions/node/v8.11.1/lib/node_modules/webpack/lib/Compilation.js:758:12)\n    at processModuleDependencies.err (/Users/daniele/.nvm/versions/node/v8.11.1/lib/node_modules/webpack/lib/Compilation.js:697:9)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)\n @ ./main.ts"
+  ],
+  "version": "4.6.0",
+  "hash": "197c689ce05b78332abf",
+  "time": 3297,
+  "builtAt": 1525124797127,
+  "publicPath": "",
+  "outputPath": "/Users/daniele/GIT/TS-Advanced/dist",
+  "assetsByChunkName": {
+    "main": "bundle.js"
+  },
+  "assets": [
+    {
+      "name": "bundle.js",
+      "size": 101153,
+      "chunks": [
+        "main"
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        "main"
+      ],
+      "assets": [
+        "bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": "main",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 35790,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "bundle.js"
+      ],
+      "hash": "0c8b980b062e4dcc937e",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": "./ sync recursive",
+          "identifier": "/Users/daniele/GIT/TS-Advanced sync",
+          "name": ". sync",
+          "index": 3,
+          "index2": 2,
+          "size": 160,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+          "issuerId": "./main.ts",
+          "issuerName": "./main.ts",
+          "issuerPath": [
+            {
+              "id": "./main.ts",
+              "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+              "name": "./main.ts",
+              "profile": {
+                "factory": 46,
+                "building": 1945
+              }
+            }
+          ],
+          "profile": {
+            "factory": 73,
+            "building": 423
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./main.ts",
+              "moduleIdentifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+              "module": "./main.ts",
+              "moduleName": "./main.ts",
+              "type": "cjs require context",
+              "userRequest": ".",
+              "loc": "195:18-46"
+            }
+          ],
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1
+        },
+        {
+          "id": "./main.ts",
+          "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+          "name": "./main.ts",
+          "index": 0,
+          "index2": 3,
+          "size": 7991,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 46,
+            "building": 1945
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./main.ts",
+              "loc": "main"
+            }
+          ],
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "\"use strict\";\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\n/*\n * This is a demonstration of type checking with TypeScript. This example is\n * a Hacker News client.\n *\n * This module may be imported as a library. If run directly it will use some\n * very simple code to print out recent story titles to the command line.\n *\n * Take a look at the accompanying blog post:\n * http://www.olioapps.com/blog/checking-types-against-the-real-world-in-typescript/\n */\n//import * as t from \"io-ts\";\n//import { reporter } from \"io-ts-reporters\";\nconst t = __importStar(require(\"./src\"));\n/* types and validators */\n// Type and validator for IDs. This is just an alias for the `number` type.\nexports.ID_V = t.number;\n// Type and validator for properties common to all Hacker News item types\nconst ItemCommonV = t.type({\n    by: t.string,\n    id: exports.ID_V,\n    time: t.number,\n    dead: optional(t.boolean),\n    deleted: optional(t.boolean),\n    kids: optional(t.array(exports.ID_V)) // IDs of comments on an item\n}, \"ItemCommon\");\n// Type and validator for properties common to stories, job postings, and polls\nconst TopLevelV = t.type({\n    score: t.number,\n    title: t.string\n}, \"TopLevel\");\nconst StoryV = t.intersection([\n    t.type({\n        type: t.literal(\"story\"),\n        descendants: t.number,\n        text: optional(t.string),\n        url: optional(t.string) // URL of linked article if the story is not text post\n    }),\n    ItemCommonV,\n    TopLevelV\n], \"Story\");\nconst JobV = t.intersection([\n    t.type({\n        type: t.literal(\"job\"),\n        text: optional(t.string),\n        url: optional(t.string) // URL of linked page if the job is not text post\n    }),\n    ItemCommonV,\n    TopLevelV\n], \"Job\");\nconst PollV = t.intersection([\n    t.type({\n        type: t.literal(\"poll\"),\n        descendants: t.number,\n        parts: t.array(exports.ID_V)\n    }),\n    ItemCommonV,\n    TopLevelV\n], \"Poll\");\nconst CommentV = t.intersection([\n    t.type({\n        type: t.literal(\"comment\"),\n        parent: exports.ID_V,\n        text: t.string // HTML content\n    }),\n    ItemCommonV\n], \"Comment\");\nconst PollOptV = t.intersection([\n    t.type({\n        type: t.literal(\"pollopt\"),\n        poll: exports.ID_V,\n        score: t.number,\n        text: t.string // HTML content\n    })\n], \"PollOpt\");\nconst ItemV = t.taggedUnion(\"type\", // the name of the tag property\n[CommentV, JobV, PollV, PollOptV, StoryV], \"Item\");\n/* functions to fetch and display stories and other items */\nasync function fetchItem(id) {\n    const res = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);\n    const obj = await res.json();\n    return decodeToPromise(ItemV, obj);\n}\nexports.fetchItem = fetchItem;\n// If you know the type of the item to be fetched use this function with\n// a validator for that specific type.\nasync function fetchItemType(validator, id) {\n    const res = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);\n    const obj = await res.json();\n    return decodeToPromise(validator, obj);\n}\nfunction getTitle(item) {\n    if (item.type === \"story\") {\n        // This works because this line is only reachable if the type of\n        // `item.type` is `'story'`, which means that `item` can be expected to\n        // have a `title` property.\n        return item.title;\n    }\n}\nfunction formatStory(story) {\n    return `\"${story.title}\" submitted by ${story.by}`;\n}\nfunction formatItem(item) {\n    console.log(item.type, ' -> ');\n    switch (item.type) {\n        case \"story\":\n            return `\"${item.title}\" submitted by ${item.by}`;\n        case \"job\":\n            return `job posting: ${item.title}`;\n        case \"poll\":\n            const numOpts = item.parts.length;\n            return `poll: \"${item.title}\" - choose one of ${numOpts} options`;\n        case \"pollopt\":\n            return `poll option: ${item.text}`;\n        case \"comment\":\n            const excerpt = item.text.length > 60 ? item.text.slice(0, 60) + \"...\" : item.text;\n            return `${item.by} commented: ${excerpt}`;\n    }\n}\n// Fetch up to 500 of the top stories, jobs, or polls\nasync function fetchTopStories(count) {\n    const res = await fetch(\"https://hacker-news.firebaseio.com/v0/topstories.json\");\n    const ids = await decodeToPromise(t.array(exports.ID_V), await res.json());\n    return Promise.all(ids.slice(0, count).map(id => fetchItem(id)));\n}\nexports.fetchTopStories = fetchTopStories;\n/* a very basic client */\nasync function main() {\n    try {\n        const stories = await fetchTopStories(15);\n        for (const story of stories) {\n            console.log(formatItem(story) + \"\\n\");\n        }\n    }\n    catch (err) {\n        console.error(err.message);\n    }\n}\nexports.main = main;\nmain().then(() => console.log(\"THE END\"));\n/* utility functions */\n// Produces a validator that is a union of the given type with `undefined`\nfunction optional(type, name = `${type.name} | undefined`) {\n    return t.union([type, t.undefined], name);\n}\n// Apply a validator and get the result in a `Promise`\nfunction decodeToPromise(validator, input) {\n    const result = validator.decode(input);\n    const jsToString = function (value) { return (value === undefined ? 'undefined' : JSON.stringify(value)); };\n    const formatValidationError = function (error) {\n        var path = error.context\n            .map(function (c) { return c.key; })\n            .filter(function (key) { return key.length > 0; })\n            .join('.');\n        // The actual error is last in context\n        var errorContext = error.context[error.context.length - 1];\n        var expectedType = errorContext.type.name;\n        // https://github.com/elm-lang/core/blob/18c9e84e975ed22649888bfad15d1efdb0128ab2/src/Native/Json.js#L199\n        // tslint:disable-next-line:prefer-template\n        return \"Expecting \" + expectedType\n            + (path === '' ? '' : \" at \" + path)\n            + (\" but instead got: \" + jsToString(error.value) + \".\");\n    };\n    return result.fold(errors => {\n        //const messages = reporter(result);\n        const messages = errors.map(formatValidationError);\n        return Promise.reject(new Error(messages.join(\"\\n\")));\n    }, value => Promise.resolve(value));\n}\nasync function fetchTitle(storyId) {\n    const res = await fetch(`https://hacker-news.firebaseio.com/v0/item/${storyId}.json`);\n    const data = await res.json();\n    // If the data that is fetched does not match the `StoryV` validator then this\n    // line will result in a rejected promise.\n    const story = await decodeToPromise(StoryV, data);\n    // This line does not type-check because TypeScript can infer from the\n    // definition of `StoryV` that `story` does not have a property called\n    // `descendents`.\n    // const ds = story.descendents;\n    // TypeScript infers that `story` does have a `title` property with a value of\n    // type `string`, so this passes type-checking.\n    return story.title;\n}\n//* MINIMAL IMPLEMENTATION OF fetch IN NODE.js *//\nfunction fetch(url) {\n    return new Promise((resolve, reject) => {\n        var req = require(url.split(\"://\")[0]); //\"http\" or \"https\"\n        req.get(encodeURI(url), (res) => {\n            var body = \"\";\n            res.setEncoding(\"utf8\");\n            res.on(\"data\", (chunk) => { body += chunk; });\n            res.on(\"end\", () => resolve({\n                json: function () {\n                    var v;\n                    try {\n                        v = JSON.parse(body);\n                    }\n                    catch (e) {\n                        v = body;\n                    }\n                    return Promise.resolve(v);\n                }\n            }));\n        }).on(\"error\", (err) => { reject(err); });\n    });\n}\n"
+        },
+        {
+          "id": "./src/Either.ts",
+          "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/Either.ts",
+          "name": "./src/Either.ts",
+          "index": 2,
+          "index2": 0,
+          "size": 1255,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/index.ts",
+          "issuerId": "./src/index.ts",
+          "issuerName": "./src/index.ts",
+          "issuerPath": [
+            {
+              "id": "./main.ts",
+              "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+              "name": "./main.ts",
+              "profile": {
+                "factory": 46,
+                "building": 1945
+              }
+            },
+            {
+              "id": "./src/index.ts",
+              "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/index.ts",
+              "name": "./src/index.ts",
+              "profile": {
+                "factory": 73,
+                "building": 423
+              }
+            }
+          ],
+          "profile": {
+            "factory": 1,
+            "building": 13
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/index.ts",
+              "moduleIdentifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/index.ts",
+              "module": "./src/index.ts",
+              "moduleName": "./src/index.ts",
+              "type": "cjs require",
+              "userRequest": "./Either",
+              "loc": "3:17-36"
+            }
+          ],
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "\"use strict\";\n// TODO replace with fp-ts' Either once published\nObject.defineProperty(exports, \"__esModule\", { value: true });\nclass HKT {\n}\nexports.HKT = HKT;\nfunction identity(a) {\n    return a;\n}\nexports.identity = identity;\nclass Left extends HKT {\n    constructor(value) {\n        super();\n        this.value = value;\n    }\n    map(f) {\n        return this;\n    }\n    //ap<B>(fab: Either<L, (a: A) => B>): Either<L, B> {\n    //  return this as any as Either<L, B>\n    //}\n    chain(f) {\n        return this;\n    }\n    fold(l, r) {\n        return l(this.value);\n    }\n    isLeft() {\n        return true;\n    }\n    isRight() {\n        return false;\n    }\n}\nexports.Left = Left;\nclass Right extends HKT {\n    constructor(value) {\n        super();\n        this.value = value;\n    }\n    map(f) {\n        return new Right(f(this.value));\n    }\n    //ap<B>(fab: Either<L, (a: A) => B>): Either<L, B> {\n    //  return fab.fold<Either<L, B>>(<any>identity, f => this.map(f))\n    //}\n    chain(f) {\n        return f(this.value);\n    }\n    fold(l, r) {\n        return r(this.value);\n    }\n    isLeft() {\n        return false;\n    }\n    isRight() {\n        return true;\n    }\n}\nexports.Right = Right;\nfunction of(a) {\n    return new Right(a);\n}\nexports.of = of;\n"
+        },
+        {
+          "id": "./src/index.ts",
+          "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/index.ts",
+          "name": "./src/index.ts",
+          "index": 1,
+          "index2": 1,
+          "size": 26384,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+          "issuerId": "./main.ts",
+          "issuerName": "./main.ts",
+          "issuerPath": [
+            {
+              "id": "./main.ts",
+              "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+              "name": "./main.ts",
+              "profile": {
+                "factory": 46,
+                "building": 1945
+              }
+            }
+          ],
+          "profile": {
+            "factory": 73,
+            "building": 423
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./main.ts",
+              "moduleIdentifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+              "module": "./main.ts",
+              "moduleName": "./main.ts",
+              "type": "cjs require",
+              "userRequest": "./src",
+              "loc": "22:23-39"
+            }
+          ],
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst Either_1 = require(\"./Either\");\nclass Type {\n    constructor(\n    /** a unique name for this runtime type */\n    name, \n    /** a custom type guard */\n    is, \n    /** succeeds if a value of type I can be decoded to a value of type A */\n    validate, \n    /** converts a value of type A to a value of type O */\n    encode) {\n        this.name = name;\n        this.is = is;\n        this.validate = validate;\n        this.encode = encode;\n    }\n    pipe(ab, name) {\n        return new Type(name || `pipe(${this.name}, ${ab.name})`, ab.is, (i, c) => {\n            const validation = this.validate(i, c);\n            if (validation.isLeft()) {\n                return validation;\n            }\n            else {\n                return ab.validate(validation.value, c);\n            }\n        }, this.encode === exports.identity && ab.encode === exports.identity ? exports.identity : b => this.encode(ab.encode(b)));\n    }\n    asDecoder() {\n        return this;\n    }\n    asEncoder() {\n        return this;\n    }\n    /** a version of `validate` with a default context */\n    decode(i) {\n        return this.validate(i, exports.getDefaultContext(this));\n    }\n}\nexports.Type = Type;\nexports.identity = (a) => a;\nexports.getFunctionName = (f) => f.displayName || f.name || `<function${f.length}>`;\nexports.getContextEntry = (key, type) => ({ key, type });\nexports.getValidationError = (value, context) => ({ value, context });\nexports.getDefaultContext = (type) => [{ key: '', type }];\nexports.appendContext = (c, key, type) => {\n    const len = c.length;\n    const r = Array(len + 1);\n    for (let i = 0; i < len; i++) {\n        r[i] = c[i];\n    }\n    r[len] = { key, type };\n    return r;\n};\nexports.failures = (errors) => new Either_1.Left(errors);\nexports.failure = (value, context) => exports.failures([exports.getValidationError(value, context)]);\nexports.success = (value) => new Either_1.Right(value);\nconst pushAll = (xs, ys) => {\n    const l = ys.length;\n    for (let i = 0; i < l; i++) {\n        xs.push(ys[i]);\n    }\n};\n//\n// basic types\n//\nclass NullType extends Type {\n    constructor() {\n        super('null', (m) => m === null, (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'NullType';\n    }\n}\nexports.NullType = NullType;\n/** @alias `null` */\nexports.nullType = new NullType();\nexports.null = exports.nullType;\nclass UndefinedType extends Type {\n    constructor() {\n        super('undefined', (m) => m === void 0, (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'UndefinedType';\n    }\n}\nexports.UndefinedType = UndefinedType;\nconst undefinedType = new UndefinedType();\nexports.undefined = undefinedType;\nclass AnyType extends Type {\n    constructor() {\n        super('any', (_) => true, exports.success, exports.identity);\n        this._tag = 'AnyType';\n    }\n}\nexports.AnyType = AnyType;\nexports.any = new AnyType();\nclass NeverType extends Type {\n    constructor() {\n        super('never', (_) => false, (m, c) => exports.failure(m, c), () => {\n            throw new Error('cannot serialize never');\n        });\n        this._tag = 'NeverType';\n    }\n}\nexports.NeverType = NeverType;\nexports.never = new NeverType();\nclass StringType extends Type {\n    constructor() {\n        super('string', (m) => typeof m === 'string', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'StringType';\n    }\n}\nexports.StringType = StringType;\nexports.string = new StringType();\nclass NumberType extends Type {\n    constructor() {\n        super('number', (m) => typeof m === 'number', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'NumberType';\n    }\n}\nexports.NumberType = NumberType;\nexports.number = new NumberType();\nclass BooleanType extends Type {\n    constructor() {\n        super('boolean', (m) => typeof m === 'boolean', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'BooleanType';\n    }\n}\nexports.BooleanType = BooleanType;\nexports.boolean = new BooleanType();\nclass AnyArrayType extends Type {\n    constructor() {\n        super('Array', Array.isArray, (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'AnyArrayType';\n    }\n}\nexports.AnyArrayType = AnyArrayType;\nconst arrayType = new AnyArrayType();\nexports.Array = arrayType;\nclass AnyDictionaryType extends Type {\n    constructor() {\n        super('Dictionary', (m) => m !== null && typeof m === 'object', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'AnyDictionaryType';\n    }\n}\nexports.AnyDictionaryType = AnyDictionaryType;\nexports.Dictionary = new AnyDictionaryType();\nclass ObjectType extends Type {\n    constructor() {\n        super('object', exports.Dictionary.is, exports.Dictionary.validate, exports.identity);\n        this._tag = 'ObjectType';\n    }\n}\nexports.ObjectType = ObjectType;\nexports.object = new ObjectType();\nclass FunctionType extends Type {\n    constructor() {\n        super('Function', \n        // tslint:disable-next-line:strict-type-predicates\n        (m) => typeof m === 'function', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'FunctionType';\n    }\n}\nexports.FunctionType = FunctionType;\nexports.Function = new FunctionType();\n//\n// refinements\n//\nclass RefinementType extends Type {\n    constructor(name, is, validate, serialize, type, predicate) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this.predicate = predicate;\n        this._tag = 'RefinementType';\n    }\n}\nexports.RefinementType = RefinementType;\nexports.refinement = (type, predicate, name = `(${type.name} | ${exports.getFunctionName(predicate)})`) => new RefinementType(name, (m) => type.is(m) && predicate(m), (i, c) => {\n    const validation = type.validate(i, c);\n    if (validation.isLeft()) {\n        return validation;\n    }\n    else {\n        const a = validation.value;\n        return predicate(a) ? exports.success(a) : exports.failure(a, c);\n    }\n}, type.encode, type, predicate);\nexports.Integer = exports.refinement(exports.number, n => n % 1 === 0, 'Integer');\n//\n// literals\n//\nclass LiteralType extends Type {\n    constructor(name, is, validate, serialize, value) {\n        super(name, is, validate, serialize);\n        this.value = value;\n        this._tag = 'LiteralType';\n    }\n}\nexports.LiteralType = LiteralType;\nexports.literal = (value, name = JSON.stringify(value)) => {\n    const is = (m) => m === value;\n    return new LiteralType(name, is, (m, c) => (is(m) ? exports.success(value) : exports.failure(m, c)), exports.identity, value);\n};\n//\n// keyof\n//\nclass KeyofType extends Type {\n    constructor(name, is, validate, serialize, keys) {\n        super(name, is, validate, serialize);\n        this.keys = keys;\n        this._tag = 'KeyofType';\n    }\n}\nexports.KeyofType = KeyofType;\nexports.keyof = (keys, name = `(keyof ${JSON.stringify(Object.keys(keys))})`) => {\n    const is = (m) => exports.string.is(m) && keys.hasOwnProperty(m);\n    return new KeyofType(name, is, (m, c) => (is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity, keys);\n};\n//\n// recursive types\n//\nclass RecursiveType extends Type {\n    constructor(name, is, validate, serialize, runDefinition) {\n        super(name, is, validate, serialize);\n        this.runDefinition = runDefinition;\n        this._tag = 'RecursiveType';\n    }\n    get type() {\n        return this.runDefinition();\n    }\n}\nexports.RecursiveType = RecursiveType;\nexports.recursion = (name, definition) => {\n    let cache;\n    const runDefinition = () => {\n        if (!cache) {\n            cache = definition(Self);\n        }\n        return cache;\n    };\n    const Self = new RecursiveType(name, (m) => runDefinition().is(m), (m, c) => runDefinition().validate(m, c), a => runDefinition().encode(a), runDefinition);\n    return Self;\n};\n//\n// arrays\n//\nclass ArrayType extends Type {\n    constructor(name, is, validate, serialize, type) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this._tag = 'ArrayType';\n    }\n}\nexports.ArrayType = ArrayType;\nexports.array = (type, name = `Array<${type.name}>`) => new ArrayType(name, (m) => arrayType.is(m) && m.every(type.is), (m, c) => {\n    const arrayValidation = arrayType.validate(m, c);\n    if (arrayValidation.isLeft()) {\n        return arrayValidation;\n    }\n    else {\n        const xs = arrayValidation.value;\n        const len = xs.length;\n        let a = xs;\n        const errors = [];\n        for (let i = 0; i < len; i++) {\n            const x = xs[i];\n            const validation = type.validate(x, exports.appendContext(c, String(i), type));\n            if (validation.isLeft()) {\n                pushAll(errors, validation.value);\n            }\n            else {\n                const vx = validation.value;\n                if (vx !== x) {\n                    if (a === xs) {\n                        a = xs.slice();\n                    }\n                    a[i] = vx;\n                }\n            }\n        }\n        return errors.length ? exports.failures(errors) : exports.success(a);\n    }\n}, type.encode === exports.identity ? exports.identity : a => a.map(type.encode), type);\n//\n// optionals\n//\nclass OptionalType extends Type {\n    constructor(name, is, validate, serialize, type) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this._tag = 'OptionalType';\n    }\n}\nexports.OptionalType = OptionalType;\nexports.optional = (type, name = `${type.name}?`) => new OptionalType(name, (m) => undefinedType.is(m) || type.is(m), (i, c) => {\n    if (undefinedType.is(i)) {\n        return exports.success(i);\n    }\n    else {\n        return type.validate(i, c);\n    }\n}, type.encode === exports.identity ? exports.identity : a => (undefinedType.is(a) ? a : type.encode(a)), type);\n//\n// interfaces\n//\nclass InterfaceType extends Type {\n    constructor(name, is, validate, serialize, props) {\n        super(name, is, validate, serialize);\n        this.props = props;\n        this._tag = 'InterfaceType';\n    }\n}\nexports.InterfaceType = InterfaceType;\nconst getNameFromProps = (props) => `{ ${Object.keys(props)\n    .map(k => `${k}: ${props[k].name}`)\n    .join(', ')} }`;\nconst useIdentity = (types, len) => {\n    for (let i = 0; i < len; i++) {\n        if (types[i].encode !== exports.identity) {\n            return false;\n        }\n    }\n    return true;\n};\n/** @alias `interface` */\nexports.type = (props, name = getNameFromProps(props)) => {\n    const keys = Object.keys(props);\n    const types = keys.map(key => props[key]);\n    const len = keys.length;\n    return new InterfaceType(name, (m) => {\n        if (!exports.Dictionary.is(m)) {\n            return false;\n        }\n        for (let i = 0; i < len; i++) {\n            if (!types[i].is(m[keys[i]])) {\n                return false;\n            }\n        }\n        return true;\n    }, (m, c) => {\n        const dictionaryValidation = exports.Dictionary.validate(m, c);\n        if (dictionaryValidation.isLeft()) {\n            return dictionaryValidation;\n        }\n        else {\n            const o = dictionaryValidation.value;\n            let a = o;\n            const errors = [];\n            for (let i = 0; i < len; i++) {\n                const k = keys[i];\n                const ok = o[k];\n                const type = types[i];\n                const validation = type.validate(ok, exports.appendContext(c, k, type));\n                if (validation.isLeft()) {\n                    pushAll(errors, validation.value);\n                }\n                else {\n                    const vok = validation.value;\n                    if (vok !== ok) {\n                        if (a === o) {\n                            a = { ...o };\n                        }\n                        a[k] = vok;\n                    }\n                }\n            }\n            return errors.length ? exports.failures(errors) : exports.success(a);\n        }\n    }, useIdentity(types, len)\n        ? exports.identity\n        : a => {\n            const s = { ...a };\n            for (let i = 0; i < len; i++) {\n                const k = keys[i];\n                const encode = types[i].encode;\n                if (encode !== exports.identity) {\n                    const v = encode(a[k]);\n                    if (s[k] !== v) {\n                        s[k] = v;\n                    }\n                }\n            }\n            return s;\n        }, props);\n};\nexports.interface = exports.type;\n//\n// partials\n//\nclass PartialType extends Type {\n    constructor(name, is, validate, serialize, props) {\n        super(name, is, validate, serialize);\n        this.props = props;\n        this._tag = 'PartialType';\n    }\n}\nexports.PartialType = PartialType;\nexports.partial = (props, name = `PartialType<${getNameFromProps(props)}>`) => {\n    const keys = Object.keys(props);\n    const types = keys.map(key => props[key]);\n    const len = keys.length;\n    const partials = {};\n    for (let i = 0; i < len; i++) {\n        partials[keys[i]] = exports.union([types[i], undefinedType]);\n    }\n    const partial = exports.type(partials);\n    return new PartialType(name, partial.is, partial.validate, useIdentity(types, len)\n        ? exports.identity\n        : a => {\n            const s = {};\n            for (let i = 0; i < len; i++) {\n                const k = keys[i];\n                const ak = a[k];\n                if (ak !== undefined) {\n                    s[k] = types[i].encode(ak);\n                }\n            }\n            return s;\n        }, props);\n};\n//\n// dictionaries\n//\nclass DictionaryType extends Type {\n    constructor(name, is, validate, serialize, domain, codomain) {\n        super(name, is, validate, serialize);\n        this.domain = domain;\n        this.codomain = codomain;\n        this._tag = 'DictionaryType';\n    }\n}\nexports.DictionaryType = DictionaryType;\nexports.dictionary = (domain, codomain, name = `{ [K in ${domain.name}]: ${codomain.name} }`) => new DictionaryType(name, (m) => exports.Dictionary.is(m) && Object.keys(m).every(k => domain.is(k) && codomain.is(m[k])), (m, c) => {\n    const dictionaryValidation = exports.Dictionary.validate(m, c);\n    if (dictionaryValidation.isLeft()) {\n        return dictionaryValidation;\n    }\n    else {\n        const o = dictionaryValidation.value;\n        const a = {};\n        const errors = [];\n        const keys = Object.keys(o);\n        const len = keys.length;\n        let changed = false;\n        for (let i = 0; i < len; i++) {\n            let k = keys[i];\n            const ok = o[k];\n            const domainValidation = domain.validate(k, exports.appendContext(c, k, domain));\n            const codomainValidation = codomain.validate(ok, exports.appendContext(c, k, codomain));\n            if (domainValidation.isLeft()) {\n                pushAll(errors, domainValidation.value);\n            }\n            else {\n                const vk = domainValidation.value;\n                changed = changed || vk !== k;\n                k = vk;\n            }\n            if (codomainValidation.isLeft()) {\n                pushAll(errors, codomainValidation.value);\n            }\n            else {\n                const vok = codomainValidation.value;\n                changed = changed || vok !== ok;\n                a[k] = vok;\n            }\n        }\n        return errors.length ? exports.failures(errors) : exports.success((changed ? a : o));\n    }\n}, domain.encode === exports.identity && codomain.encode === exports.identity\n    ? exports.identity\n    : a => {\n        const s = {};\n        const keys = Object.keys(a);\n        const len = keys.length;\n        for (let i = 0; i < len; i++) {\n            const k = keys[i];\n            s[String(domain.encode(k))] = codomain.encode(a[k]);\n        }\n        return s;\n    }, domain, codomain);\n//\n// unions\n//\nclass UnionType extends Type {\n    constructor(name, is, validate, serialize, types) {\n        super(name, is, validate, serialize);\n        this.types = types;\n        this._tag = 'UnionType';\n    }\n}\nexports.UnionType = UnionType;\nexports.union = (types, name = `(${types.map(type => type.name).join(' | ')})`) => {\n    const len = types.length;\n    return new UnionType(name, (m) => types.some(type => type.is(m)), (m, c) => {\n        const errors = [];\n        for (let i = 0; i < len; i++) {\n            const type = types[i];\n            const validation = type.validate(m, exports.appendContext(c, String(i), type));\n            if (validation.isRight()) {\n                return validation;\n            }\n            else {\n                pushAll(errors, validation.value);\n            }\n        }\n        return exports.failures(errors);\n    }, types.every(type => type.encode === exports.identity)\n        ? exports.identity\n        : a => {\n            let i = 0;\n            for (; i < len - 1; i++) {\n                const type = types[i];\n                if (type.is(a)) {\n                    return type.encode(a);\n                }\n            }\n            return types[i].encode(a);\n        }, types);\n};\n//\n// intersections\n//\nclass IntersectionType extends Type {\n    constructor(name, is, validate, serialize, types) {\n        super(name, is, validate, serialize);\n        this.types = types;\n        this._tag = 'IntersectionType';\n    }\n}\nexports.IntersectionType = IntersectionType;\nfunction intersection(types, name = `(${types.map(type => type.name).join(' & ')})`) {\n    const len = types.length;\n    return new IntersectionType(name, (m) => types.every(type => type.is(m)), (m, c) => {\n        let a = m;\n        const errors = [];\n        for (let i = 0; i < len; i++) {\n            const type = types[i];\n            const validation = type.validate(a, c);\n            if (validation.isLeft()) {\n                pushAll(errors, validation.value);\n            }\n            else {\n                a = validation.value;\n            }\n        }\n        return errors.length ? exports.failures(errors) : exports.success(a);\n    }, types.every(type => type.encode === exports.identity)\n        ? exports.identity\n        : a => {\n            let s = a;\n            for (let i = 0; i < len; i++) {\n                const type = types[i];\n                s = type.encode(s);\n            }\n            return s;\n        }, types);\n}\nexports.intersection = intersection;\n//\n// tuples\n//\nclass TupleType extends Type {\n    constructor(name, is, validate, serialize, types) {\n        super(name, is, validate, serialize);\n        this.types = types;\n        this._tag = 'TupleType';\n    }\n}\nexports.TupleType = TupleType;\nfunction tuple(types, name = `[${types.map(type => type.name).join(', ')}]`) {\n    const len = types.length;\n    return new TupleType(name, (m) => arrayType.is(m) && m.length === len && types.every((type, i) => type.is(m[i])), (m, c) => {\n        const arrayValidation = arrayType.validate(m, c);\n        if (arrayValidation.isLeft()) {\n            return arrayValidation;\n        }\n        else {\n            const as = arrayValidation.value;\n            let t = as;\n            const errors = [];\n            for (let i = 0; i < len; i++) {\n                const a = as[i];\n                const type = types[i];\n                const validation = type.validate(a, exports.appendContext(c, String(i), type));\n                if (validation.isLeft()) {\n                    pushAll(errors, validation.value);\n                }\n                else {\n                    const va = validation.value;\n                    if (va !== a) {\n                        if (t === as) {\n                            t = as.slice();\n                        }\n                        t[i] = va;\n                    }\n                }\n            }\n            if (as.length > len) {\n                errors.push(exports.getValidationError(as[len], exports.appendContext(c, String(len), exports.never)));\n            }\n            return errors.length ? exports.failures(errors) : exports.success(t);\n        }\n    }, types.every(type => type.encode === exports.identity) ? exports.identity : a => types.map((type, i) => type.encode(a[i])), types);\n}\nexports.tuple = tuple;\n//\n// readonly objects\n//\nclass ReadonlyType extends Type {\n    constructor(name, is, validate, serialize, type) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this._tag = 'ReadonlyType';\n    }\n}\nexports.ReadonlyType = ReadonlyType;\nexports.readonly = (type, name = `Readonly<${type.name}>`) => new ReadonlyType(name, type.is, (m, c) => type.validate(m, c).map(x => {\n    if (process.env.NODE_ENV !== 'production') {\n        return Object.freeze(x);\n    }\n    return x;\n}), type.encode === exports.identity ? exports.identity : type.encode, type);\n//\n// readonly arrays\n//\nclass ReadonlyArrayType extends Type {\n    constructor(name, is, validate, serialize, type) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this._tag = 'ReadonlyArrayType';\n    }\n}\nexports.ReadonlyArrayType = ReadonlyArrayType;\nexports.readonlyArray = (type, name = `ReadonlyArray<${type.name}>`) => {\n    const arrayType = exports.array(type);\n    return new ReadonlyArrayType(name, arrayType.is, (m, c) => arrayType.validate(m, c).map(x => {\n        if (process.env.NODE_ENV !== 'production') {\n            return Object.freeze(x);\n        }\n        else {\n            return x;\n        }\n    }), arrayType.encode, type);\n};\n//\n// strict interfaces\n//\nclass StrictType extends Type {\n    constructor(name, is, validate, serialize, props) {\n        super(name, is, validate, serialize);\n        this.props = props;\n        this._tag = 'StrictType';\n    }\n}\nexports.StrictType = StrictType;\n/** Specifies that only the given interface properties are allowed */\nexports.strict = (props, name = `StrictType<${getNameFromProps(props)}>`) => {\n    const loose = exports.type(props);\n    return new StrictType(name, (m) => loose.is(m) && Object.getOwnPropertyNames(m).every(k => props.hasOwnProperty(k)), (m, c) => {\n        const looseValidation = loose.validate(m, c);\n        if (looseValidation.isLeft()) {\n            return looseValidation;\n        }\n        else {\n            const o = looseValidation.value;\n            const keys = Object.getOwnPropertyNames(o);\n            const len = keys.length;\n            const errors = [];\n            for (let i = 0; i < len; i++) {\n                const key = keys[i];\n                if (!props.hasOwnProperty(key)) {\n                    errors.push(exports.getValidationError(o[key], exports.appendContext(c, key, exports.never)));\n                }\n            }\n            return errors.length ? exports.failures(errors) : exports.success(o);\n        }\n    }, loose.encode, props);\n};\nconst isTagged = (tag) => {\n    const f = (type) => {\n        if (type instanceof InterfaceType || type instanceof StrictType) {\n            return type.props.hasOwnProperty(tag);\n        }\n        else if (type instanceof IntersectionType) {\n            return type.types.some(f);\n        }\n        else if (type instanceof UnionType) {\n            return type.types.every(f);\n        }\n        else if (type instanceof RefinementType) {\n            return f(type.type);\n        }\n        else {\n            return false;\n        }\n    };\n    return f;\n};\nconst findTagged = (tag, types) => {\n    const len = types.length;\n    const is = isTagged(tag);\n    let i = 0;\n    for (; i < len - 1; i++) {\n        const type = types[i];\n        if (is(type)) {\n            return type;\n        }\n    }\n    return types[i];\n};\nconst getTagValue = (tag) => {\n    const f = (type) => {\n        switch (type._tag) {\n            case 'InterfaceType':\n            case 'StrictType':\n                return type.props[tag].value;\n            case 'IntersectionType':\n                return f(findTagged(tag, type.types));\n            case 'UnionType':\n                return f(type.types[0]);\n            case 'RefinementType':\n                return f(type.type);\n        }\n    };\n    return f;\n};\nexports.taggedUnion = (tag, types, name = `(${types.map(type => type.name).join(' | ')})`) => {\n    const len = types.length;\n    const values = new Array(len);\n    const hash = {};\n    let useHash = true;\n    const get = getTagValue(tag);\n    for (let i = 0; i < len; i++) {\n        const value = get(types[i]);\n        useHash = useHash && exports.string.is(value);\n        values[i] = value;\n        hash[String(value)] = i;\n    }\n    const isTagValue = useHash\n        ? (m) => exports.string.is(m) && hash.hasOwnProperty(m)\n        : (m) => values.indexOf(m) !== -1;\n    const getIndex = useHash\n        ? tag => hash[tag]\n        : tag => {\n            let i = 0;\n            for (; i < len - 1; i++) {\n                if (values[i] === tag) {\n                    break;\n                }\n            }\n            return i;\n        };\n    const TagValue = new Type(values.map(l => JSON.stringify(l)).join(' | '), isTagValue, (m, c) => (isTagValue(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n    return new UnionType(name, (v) => {\n        if (!exports.Dictionary.is(v)) {\n            return false;\n        }\n        const tagValue = v[tag];\n        return TagValue.is(tagValue) && types[getIndex(tagValue)].is(v);\n    }, (s, c) => {\n        const dictionaryValidation = exports.Dictionary.validate(s, c);\n        if (dictionaryValidation.isLeft()) {\n            return dictionaryValidation;\n        }\n        else {\n            const d = dictionaryValidation.value;\n            const tagValueValidation = TagValue.validate(d[tag], exports.appendContext(c, tag, TagValue));\n            if (tagValueValidation.isLeft()) {\n                return tagValueValidation;\n            }\n            else {\n                const i = getIndex(tagValueValidation.value);\n                const type = types[i];\n                return type.validate(d, exports.appendContext(c, String(i), type));\n            }\n        }\n    }, types.every(type => type.encode === exports.identity) ? exports.identity : a => types[getIndex(a[tag])].encode(a), types);\n};\n"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "./main.ts",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "./ sync recursive",
+      "identifier": "/Users/daniele/GIT/TS-Advanced sync",
+      "name": ". sync",
+      "index": 3,
+      "index2": 2,
+      "size": 160,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+      "issuerId": "./main.ts",
+      "issuerName": "./main.ts",
+      "issuerPath": [
+        {
+          "id": "./main.ts",
+          "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+          "name": "./main.ts",
+          "profile": {
+            "factory": 46,
+            "building": 1945
+          }
+        }
+      ],
+      "profile": {
+        "factory": 73,
+        "building": 423
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./main.ts",
+          "moduleIdentifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+          "module": "./main.ts",
+          "moduleName": "./main.ts",
+          "type": "cjs require context",
+          "userRequest": ".",
+          "loc": "195:18-46"
+        }
+      ],
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1
+    },
+    {
+      "id": "./main.ts",
+      "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+      "name": "./main.ts",
+      "index": 0,
+      "index2": 3,
+      "size": 7991,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "profile": {
+        "factory": 46,
+        "building": 1945
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "./main.ts",
+          "loc": "main"
+        }
+      ],
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "\"use strict\";\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\n/*\n * This is a demonstration of type checking with TypeScript. This example is\n * a Hacker News client.\n *\n * This module may be imported as a library. If run directly it will use some\n * very simple code to print out recent story titles to the command line.\n *\n * Take a look at the accompanying blog post:\n * http://www.olioapps.com/blog/checking-types-against-the-real-world-in-typescript/\n */\n//import * as t from \"io-ts\";\n//import { reporter } from \"io-ts-reporters\";\nconst t = __importStar(require(\"./src\"));\n/* types and validators */\n// Type and validator for IDs. This is just an alias for the `number` type.\nexports.ID_V = t.number;\n// Type and validator for properties common to all Hacker News item types\nconst ItemCommonV = t.type({\n    by: t.string,\n    id: exports.ID_V,\n    time: t.number,\n    dead: optional(t.boolean),\n    deleted: optional(t.boolean),\n    kids: optional(t.array(exports.ID_V)) // IDs of comments on an item\n}, \"ItemCommon\");\n// Type and validator for properties common to stories, job postings, and polls\nconst TopLevelV = t.type({\n    score: t.number,\n    title: t.string\n}, \"TopLevel\");\nconst StoryV = t.intersection([\n    t.type({\n        type: t.literal(\"story\"),\n        descendants: t.number,\n        text: optional(t.string),\n        url: optional(t.string) // URL of linked article if the story is not text post\n    }),\n    ItemCommonV,\n    TopLevelV\n], \"Story\");\nconst JobV = t.intersection([\n    t.type({\n        type: t.literal(\"job\"),\n        text: optional(t.string),\n        url: optional(t.string) // URL of linked page if the job is not text post\n    }),\n    ItemCommonV,\n    TopLevelV\n], \"Job\");\nconst PollV = t.intersection([\n    t.type({\n        type: t.literal(\"poll\"),\n        descendants: t.number,\n        parts: t.array(exports.ID_V)\n    }),\n    ItemCommonV,\n    TopLevelV\n], \"Poll\");\nconst CommentV = t.intersection([\n    t.type({\n        type: t.literal(\"comment\"),\n        parent: exports.ID_V,\n        text: t.string // HTML content\n    }),\n    ItemCommonV\n], \"Comment\");\nconst PollOptV = t.intersection([\n    t.type({\n        type: t.literal(\"pollopt\"),\n        poll: exports.ID_V,\n        score: t.number,\n        text: t.string // HTML content\n    })\n], \"PollOpt\");\nconst ItemV = t.taggedUnion(\"type\", // the name of the tag property\n[CommentV, JobV, PollV, PollOptV, StoryV], \"Item\");\n/* functions to fetch and display stories and other items */\nasync function fetchItem(id) {\n    const res = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);\n    const obj = await res.json();\n    return decodeToPromise(ItemV, obj);\n}\nexports.fetchItem = fetchItem;\n// If you know the type of the item to be fetched use this function with\n// a validator for that specific type.\nasync function fetchItemType(validator, id) {\n    const res = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);\n    const obj = await res.json();\n    return decodeToPromise(validator, obj);\n}\nfunction getTitle(item) {\n    if (item.type === \"story\") {\n        // This works because this line is only reachable if the type of\n        // `item.type` is `'story'`, which means that `item` can be expected to\n        // have a `title` property.\n        return item.title;\n    }\n}\nfunction formatStory(story) {\n    return `\"${story.title}\" submitted by ${story.by}`;\n}\nfunction formatItem(item) {\n    console.log(item.type, ' -> ');\n    switch (item.type) {\n        case \"story\":\n            return `\"${item.title}\" submitted by ${item.by}`;\n        case \"job\":\n            return `job posting: ${item.title}`;\n        case \"poll\":\n            const numOpts = item.parts.length;\n            return `poll: \"${item.title}\" - choose one of ${numOpts} options`;\n        case \"pollopt\":\n            return `poll option: ${item.text}`;\n        case \"comment\":\n            const excerpt = item.text.length > 60 ? item.text.slice(0, 60) + \"...\" : item.text;\n            return `${item.by} commented: ${excerpt}`;\n    }\n}\n// Fetch up to 500 of the top stories, jobs, or polls\nasync function fetchTopStories(count) {\n    const res = await fetch(\"https://hacker-news.firebaseio.com/v0/topstories.json\");\n    const ids = await decodeToPromise(t.array(exports.ID_V), await res.json());\n    return Promise.all(ids.slice(0, count).map(id => fetchItem(id)));\n}\nexports.fetchTopStories = fetchTopStories;\n/* a very basic client */\nasync function main() {\n    try {\n        const stories = await fetchTopStories(15);\n        for (const story of stories) {\n            console.log(formatItem(story) + \"\\n\");\n        }\n    }\n    catch (err) {\n        console.error(err.message);\n    }\n}\nexports.main = main;\nmain().then(() => console.log(\"THE END\"));\n/* utility functions */\n// Produces a validator that is a union of the given type with `undefined`\nfunction optional(type, name = `${type.name} | undefined`) {\n    return t.union([type, t.undefined], name);\n}\n// Apply a validator and get the result in a `Promise`\nfunction decodeToPromise(validator, input) {\n    const result = validator.decode(input);\n    const jsToString = function (value) { return (value === undefined ? 'undefined' : JSON.stringify(value)); };\n    const formatValidationError = function (error) {\n        var path = error.context\n            .map(function (c) { return c.key; })\n            .filter(function (key) { return key.length > 0; })\n            .join('.');\n        // The actual error is last in context\n        var errorContext = error.context[error.context.length - 1];\n        var expectedType = errorContext.type.name;\n        // https://github.com/elm-lang/core/blob/18c9e84e975ed22649888bfad15d1efdb0128ab2/src/Native/Json.js#L199\n        // tslint:disable-next-line:prefer-template\n        return \"Expecting \" + expectedType\n            + (path === '' ? '' : \" at \" + path)\n            + (\" but instead got: \" + jsToString(error.value) + \".\");\n    };\n    return result.fold(errors => {\n        //const messages = reporter(result);\n        const messages = errors.map(formatValidationError);\n        return Promise.reject(new Error(messages.join(\"\\n\")));\n    }, value => Promise.resolve(value));\n}\nasync function fetchTitle(storyId) {\n    const res = await fetch(`https://hacker-news.firebaseio.com/v0/item/${storyId}.json`);\n    const data = await res.json();\n    // If the data that is fetched does not match the `StoryV` validator then this\n    // line will result in a rejected promise.\n    const story = await decodeToPromise(StoryV, data);\n    // This line does not type-check because TypeScript can infer from the\n    // definition of `StoryV` that `story` does not have a property called\n    // `descendents`.\n    // const ds = story.descendents;\n    // TypeScript infers that `story` does have a `title` property with a value of\n    // type `string`, so this passes type-checking.\n    return story.title;\n}\n//* MINIMAL IMPLEMENTATION OF fetch IN NODE.js *//\nfunction fetch(url) {\n    return new Promise((resolve, reject) => {\n        var req = require(url.split(\"://\")[0]); //\"http\" or \"https\"\n        req.get(encodeURI(url), (res) => {\n            var body = \"\";\n            res.setEncoding(\"utf8\");\n            res.on(\"data\", (chunk) => { body += chunk; });\n            res.on(\"end\", () => resolve({\n                json: function () {\n                    var v;\n                    try {\n                        v = JSON.parse(body);\n                    }\n                    catch (e) {\n                        v = body;\n                    }\n                    return Promise.resolve(v);\n                }\n            }));\n        }).on(\"error\", (err) => { reject(err); });\n    });\n}\n"
+    },
+    {
+      "id": "./src/Either.ts",
+      "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/Either.ts",
+      "name": "./src/Either.ts",
+      "index": 2,
+      "index2": 0,
+      "size": 1255,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/index.ts",
+      "issuerId": "./src/index.ts",
+      "issuerName": "./src/index.ts",
+      "issuerPath": [
+        {
+          "id": "./main.ts",
+          "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+          "name": "./main.ts",
+          "profile": {
+            "factory": 46,
+            "building": 1945
+          }
+        },
+        {
+          "id": "./src/index.ts",
+          "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/index.ts",
+          "name": "./src/index.ts",
+          "profile": {
+            "factory": 73,
+            "building": 423
+          }
+        }
+      ],
+      "profile": {
+        "factory": 1,
+        "building": 13
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/index.ts",
+          "moduleIdentifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/index.ts",
+          "module": "./src/index.ts",
+          "moduleName": "./src/index.ts",
+          "type": "cjs require",
+          "userRequest": "./Either",
+          "loc": "3:17-36"
+        }
+      ],
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "\"use strict\";\n// TODO replace with fp-ts' Either once published\nObject.defineProperty(exports, \"__esModule\", { value: true });\nclass HKT {\n}\nexports.HKT = HKT;\nfunction identity(a) {\n    return a;\n}\nexports.identity = identity;\nclass Left extends HKT {\n    constructor(value) {\n        super();\n        this.value = value;\n    }\n    map(f) {\n        return this;\n    }\n    //ap<B>(fab: Either<L, (a: A) => B>): Either<L, B> {\n    //  return this as any as Either<L, B>\n    //}\n    chain(f) {\n        return this;\n    }\n    fold(l, r) {\n        return l(this.value);\n    }\n    isLeft() {\n        return true;\n    }\n    isRight() {\n        return false;\n    }\n}\nexports.Left = Left;\nclass Right extends HKT {\n    constructor(value) {\n        super();\n        this.value = value;\n    }\n    map(f) {\n        return new Right(f(this.value));\n    }\n    //ap<B>(fab: Either<L, (a: A) => B>): Either<L, B> {\n    //  return fab.fold<Either<L, B>>(<any>identity, f => this.map(f))\n    //}\n    chain(f) {\n        return f(this.value);\n    }\n    fold(l, r) {\n        return r(this.value);\n    }\n    isLeft() {\n        return false;\n    }\n    isRight() {\n        return true;\n    }\n}\nexports.Right = Right;\nfunction of(a) {\n    return new Right(a);\n}\nexports.of = of;\n"
+    },
+    {
+      "id": "./src/index.ts",
+      "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/src/index.ts",
+      "name": "./src/index.ts",
+      "index": 1,
+      "index2": 1,
+      "size": 26384,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+      "issuerId": "./main.ts",
+      "issuerName": "./main.ts",
+      "issuerPath": [
+        {
+          "id": "./main.ts",
+          "identifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+          "name": "./main.ts",
+          "profile": {
+            "factory": 46,
+            "building": 1945
+          }
+        }
+      ],
+      "profile": {
+        "factory": 73,
+        "building": 423
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./main.ts",
+          "moduleIdentifier": "/Users/daniele/GIT/TS-Advanced/node_modules/ts-loader/index.js!/Users/daniele/GIT/TS-Advanced/main.ts",
+          "module": "./main.ts",
+          "moduleName": "./main.ts",
+          "type": "cjs require",
+          "userRequest": "./src",
+          "loc": "22:23-39"
+        }
+      ],
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst Either_1 = require(\"./Either\");\nclass Type {\n    constructor(\n    /** a unique name for this runtime type */\n    name, \n    /** a custom type guard */\n    is, \n    /** succeeds if a value of type I can be decoded to a value of type A */\n    validate, \n    /** converts a value of type A to a value of type O */\n    encode) {\n        this.name = name;\n        this.is = is;\n        this.validate = validate;\n        this.encode = encode;\n    }\n    pipe(ab, name) {\n        return new Type(name || `pipe(${this.name}, ${ab.name})`, ab.is, (i, c) => {\n            const validation = this.validate(i, c);\n            if (validation.isLeft()) {\n                return validation;\n            }\n            else {\n                return ab.validate(validation.value, c);\n            }\n        }, this.encode === exports.identity && ab.encode === exports.identity ? exports.identity : b => this.encode(ab.encode(b)));\n    }\n    asDecoder() {\n        return this;\n    }\n    asEncoder() {\n        return this;\n    }\n    /** a version of `validate` with a default context */\n    decode(i) {\n        return this.validate(i, exports.getDefaultContext(this));\n    }\n}\nexports.Type = Type;\nexports.identity = (a) => a;\nexports.getFunctionName = (f) => f.displayName || f.name || `<function${f.length}>`;\nexports.getContextEntry = (key, type) => ({ key, type });\nexports.getValidationError = (value, context) => ({ value, context });\nexports.getDefaultContext = (type) => [{ key: '', type }];\nexports.appendContext = (c, key, type) => {\n    const len = c.length;\n    const r = Array(len + 1);\n    for (let i = 0; i < len; i++) {\n        r[i] = c[i];\n    }\n    r[len] = { key, type };\n    return r;\n};\nexports.failures = (errors) => new Either_1.Left(errors);\nexports.failure = (value, context) => exports.failures([exports.getValidationError(value, context)]);\nexports.success = (value) => new Either_1.Right(value);\nconst pushAll = (xs, ys) => {\n    const l = ys.length;\n    for (let i = 0; i < l; i++) {\n        xs.push(ys[i]);\n    }\n};\n//\n// basic types\n//\nclass NullType extends Type {\n    constructor() {\n        super('null', (m) => m === null, (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'NullType';\n    }\n}\nexports.NullType = NullType;\n/** @alias `null` */\nexports.nullType = new NullType();\nexports.null = exports.nullType;\nclass UndefinedType extends Type {\n    constructor() {\n        super('undefined', (m) => m === void 0, (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'UndefinedType';\n    }\n}\nexports.UndefinedType = UndefinedType;\nconst undefinedType = new UndefinedType();\nexports.undefined = undefinedType;\nclass AnyType extends Type {\n    constructor() {\n        super('any', (_) => true, exports.success, exports.identity);\n        this._tag = 'AnyType';\n    }\n}\nexports.AnyType = AnyType;\nexports.any = new AnyType();\nclass NeverType extends Type {\n    constructor() {\n        super('never', (_) => false, (m, c) => exports.failure(m, c), () => {\n            throw new Error('cannot serialize never');\n        });\n        this._tag = 'NeverType';\n    }\n}\nexports.NeverType = NeverType;\nexports.never = new NeverType();\nclass StringType extends Type {\n    constructor() {\n        super('string', (m) => typeof m === 'string', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'StringType';\n    }\n}\nexports.StringType = StringType;\nexports.string = new StringType();\nclass NumberType extends Type {\n    constructor() {\n        super('number', (m) => typeof m === 'number', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'NumberType';\n    }\n}\nexports.NumberType = NumberType;\nexports.number = new NumberType();\nclass BooleanType extends Type {\n    constructor() {\n        super('boolean', (m) => typeof m === 'boolean', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'BooleanType';\n    }\n}\nexports.BooleanType = BooleanType;\nexports.boolean = new BooleanType();\nclass AnyArrayType extends Type {\n    constructor() {\n        super('Array', Array.isArray, (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'AnyArrayType';\n    }\n}\nexports.AnyArrayType = AnyArrayType;\nconst arrayType = new AnyArrayType();\nexports.Array = arrayType;\nclass AnyDictionaryType extends Type {\n    constructor() {\n        super('Dictionary', (m) => m !== null && typeof m === 'object', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'AnyDictionaryType';\n    }\n}\nexports.AnyDictionaryType = AnyDictionaryType;\nexports.Dictionary = new AnyDictionaryType();\nclass ObjectType extends Type {\n    constructor() {\n        super('object', exports.Dictionary.is, exports.Dictionary.validate, exports.identity);\n        this._tag = 'ObjectType';\n    }\n}\nexports.ObjectType = ObjectType;\nexports.object = new ObjectType();\nclass FunctionType extends Type {\n    constructor() {\n        super('Function', \n        // tslint:disable-next-line:strict-type-predicates\n        (m) => typeof m === 'function', (m, c) => (this.is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n        this._tag = 'FunctionType';\n    }\n}\nexports.FunctionType = FunctionType;\nexports.Function = new FunctionType();\n//\n// refinements\n//\nclass RefinementType extends Type {\n    constructor(name, is, validate, serialize, type, predicate) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this.predicate = predicate;\n        this._tag = 'RefinementType';\n    }\n}\nexports.RefinementType = RefinementType;\nexports.refinement = (type, predicate, name = `(${type.name} | ${exports.getFunctionName(predicate)})`) => new RefinementType(name, (m) => type.is(m) && predicate(m), (i, c) => {\n    const validation = type.validate(i, c);\n    if (validation.isLeft()) {\n        return validation;\n    }\n    else {\n        const a = validation.value;\n        return predicate(a) ? exports.success(a) : exports.failure(a, c);\n    }\n}, type.encode, type, predicate);\nexports.Integer = exports.refinement(exports.number, n => n % 1 === 0, 'Integer');\n//\n// literals\n//\nclass LiteralType extends Type {\n    constructor(name, is, validate, serialize, value) {\n        super(name, is, validate, serialize);\n        this.value = value;\n        this._tag = 'LiteralType';\n    }\n}\nexports.LiteralType = LiteralType;\nexports.literal = (value, name = JSON.stringify(value)) => {\n    const is = (m) => m === value;\n    return new LiteralType(name, is, (m, c) => (is(m) ? exports.success(value) : exports.failure(m, c)), exports.identity, value);\n};\n//\n// keyof\n//\nclass KeyofType extends Type {\n    constructor(name, is, validate, serialize, keys) {\n        super(name, is, validate, serialize);\n        this.keys = keys;\n        this._tag = 'KeyofType';\n    }\n}\nexports.KeyofType = KeyofType;\nexports.keyof = (keys, name = `(keyof ${JSON.stringify(Object.keys(keys))})`) => {\n    const is = (m) => exports.string.is(m) && keys.hasOwnProperty(m);\n    return new KeyofType(name, is, (m, c) => (is(m) ? exports.success(m) : exports.failure(m, c)), exports.identity, keys);\n};\n//\n// recursive types\n//\nclass RecursiveType extends Type {\n    constructor(name, is, validate, serialize, runDefinition) {\n        super(name, is, validate, serialize);\n        this.runDefinition = runDefinition;\n        this._tag = 'RecursiveType';\n    }\n    get type() {\n        return this.runDefinition();\n    }\n}\nexports.RecursiveType = RecursiveType;\nexports.recursion = (name, definition) => {\n    let cache;\n    const runDefinition = () => {\n        if (!cache) {\n            cache = definition(Self);\n        }\n        return cache;\n    };\n    const Self = new RecursiveType(name, (m) => runDefinition().is(m), (m, c) => runDefinition().validate(m, c), a => runDefinition().encode(a), runDefinition);\n    return Self;\n};\n//\n// arrays\n//\nclass ArrayType extends Type {\n    constructor(name, is, validate, serialize, type) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this._tag = 'ArrayType';\n    }\n}\nexports.ArrayType = ArrayType;\nexports.array = (type, name = `Array<${type.name}>`) => new ArrayType(name, (m) => arrayType.is(m) && m.every(type.is), (m, c) => {\n    const arrayValidation = arrayType.validate(m, c);\n    if (arrayValidation.isLeft()) {\n        return arrayValidation;\n    }\n    else {\n        const xs = arrayValidation.value;\n        const len = xs.length;\n        let a = xs;\n        const errors = [];\n        for (let i = 0; i < len; i++) {\n            const x = xs[i];\n            const validation = type.validate(x, exports.appendContext(c, String(i), type));\n            if (validation.isLeft()) {\n                pushAll(errors, validation.value);\n            }\n            else {\n                const vx = validation.value;\n                if (vx !== x) {\n                    if (a === xs) {\n                        a = xs.slice();\n                    }\n                    a[i] = vx;\n                }\n            }\n        }\n        return errors.length ? exports.failures(errors) : exports.success(a);\n    }\n}, type.encode === exports.identity ? exports.identity : a => a.map(type.encode), type);\n//\n// optionals\n//\nclass OptionalType extends Type {\n    constructor(name, is, validate, serialize, type) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this._tag = 'OptionalType';\n    }\n}\nexports.OptionalType = OptionalType;\nexports.optional = (type, name = `${type.name}?`) => new OptionalType(name, (m) => undefinedType.is(m) || type.is(m), (i, c) => {\n    if (undefinedType.is(i)) {\n        return exports.success(i);\n    }\n    else {\n        return type.validate(i, c);\n    }\n}, type.encode === exports.identity ? exports.identity : a => (undefinedType.is(a) ? a : type.encode(a)), type);\n//\n// interfaces\n//\nclass InterfaceType extends Type {\n    constructor(name, is, validate, serialize, props) {\n        super(name, is, validate, serialize);\n        this.props = props;\n        this._tag = 'InterfaceType';\n    }\n}\nexports.InterfaceType = InterfaceType;\nconst getNameFromProps = (props) => `{ ${Object.keys(props)\n    .map(k => `${k}: ${props[k].name}`)\n    .join(', ')} }`;\nconst useIdentity = (types, len) => {\n    for (let i = 0; i < len; i++) {\n        if (types[i].encode !== exports.identity) {\n            return false;\n        }\n    }\n    return true;\n};\n/** @alias `interface` */\nexports.type = (props, name = getNameFromProps(props)) => {\n    const keys = Object.keys(props);\n    const types = keys.map(key => props[key]);\n    const len = keys.length;\n    return new InterfaceType(name, (m) => {\n        if (!exports.Dictionary.is(m)) {\n            return false;\n        }\n        for (let i = 0; i < len; i++) {\n            if (!types[i].is(m[keys[i]])) {\n                return false;\n            }\n        }\n        return true;\n    }, (m, c) => {\n        const dictionaryValidation = exports.Dictionary.validate(m, c);\n        if (dictionaryValidation.isLeft()) {\n            return dictionaryValidation;\n        }\n        else {\n            const o = dictionaryValidation.value;\n            let a = o;\n            const errors = [];\n            for (let i = 0; i < len; i++) {\n                const k = keys[i];\n                const ok = o[k];\n                const type = types[i];\n                const validation = type.validate(ok, exports.appendContext(c, k, type));\n                if (validation.isLeft()) {\n                    pushAll(errors, validation.value);\n                }\n                else {\n                    const vok = validation.value;\n                    if (vok !== ok) {\n                        if (a === o) {\n                            a = { ...o };\n                        }\n                        a[k] = vok;\n                    }\n                }\n            }\n            return errors.length ? exports.failures(errors) : exports.success(a);\n        }\n    }, useIdentity(types, len)\n        ? exports.identity\n        : a => {\n            const s = { ...a };\n            for (let i = 0; i < len; i++) {\n                const k = keys[i];\n                const encode = types[i].encode;\n                if (encode !== exports.identity) {\n                    const v = encode(a[k]);\n                    if (s[k] !== v) {\n                        s[k] = v;\n                    }\n                }\n            }\n            return s;\n        }, props);\n};\nexports.interface = exports.type;\n//\n// partials\n//\nclass PartialType extends Type {\n    constructor(name, is, validate, serialize, props) {\n        super(name, is, validate, serialize);\n        this.props = props;\n        this._tag = 'PartialType';\n    }\n}\nexports.PartialType = PartialType;\nexports.partial = (props, name = `PartialType<${getNameFromProps(props)}>`) => {\n    const keys = Object.keys(props);\n    const types = keys.map(key => props[key]);\n    const len = keys.length;\n    const partials = {};\n    for (let i = 0; i < len; i++) {\n        partials[keys[i]] = exports.union([types[i], undefinedType]);\n    }\n    const partial = exports.type(partials);\n    return new PartialType(name, partial.is, partial.validate, useIdentity(types, len)\n        ? exports.identity\n        : a => {\n            const s = {};\n            for (let i = 0; i < len; i++) {\n                const k = keys[i];\n                const ak = a[k];\n                if (ak !== undefined) {\n                    s[k] = types[i].encode(ak);\n                }\n            }\n            return s;\n        }, props);\n};\n//\n// dictionaries\n//\nclass DictionaryType extends Type {\n    constructor(name, is, validate, serialize, domain, codomain) {\n        super(name, is, validate, serialize);\n        this.domain = domain;\n        this.codomain = codomain;\n        this._tag = 'DictionaryType';\n    }\n}\nexports.DictionaryType = DictionaryType;\nexports.dictionary = (domain, codomain, name = `{ [K in ${domain.name}]: ${codomain.name} }`) => new DictionaryType(name, (m) => exports.Dictionary.is(m) && Object.keys(m).every(k => domain.is(k) && codomain.is(m[k])), (m, c) => {\n    const dictionaryValidation = exports.Dictionary.validate(m, c);\n    if (dictionaryValidation.isLeft()) {\n        return dictionaryValidation;\n    }\n    else {\n        const o = dictionaryValidation.value;\n        const a = {};\n        const errors = [];\n        const keys = Object.keys(o);\n        const len = keys.length;\n        let changed = false;\n        for (let i = 0; i < len; i++) {\n            let k = keys[i];\n            const ok = o[k];\n            const domainValidation = domain.validate(k, exports.appendContext(c, k, domain));\n            const codomainValidation = codomain.validate(ok, exports.appendContext(c, k, codomain));\n            if (domainValidation.isLeft()) {\n                pushAll(errors, domainValidation.value);\n            }\n            else {\n                const vk = domainValidation.value;\n                changed = changed || vk !== k;\n                k = vk;\n            }\n            if (codomainValidation.isLeft()) {\n                pushAll(errors, codomainValidation.value);\n            }\n            else {\n                const vok = codomainValidation.value;\n                changed = changed || vok !== ok;\n                a[k] = vok;\n            }\n        }\n        return errors.length ? exports.failures(errors) : exports.success((changed ? a : o));\n    }\n}, domain.encode === exports.identity && codomain.encode === exports.identity\n    ? exports.identity\n    : a => {\n        const s = {};\n        const keys = Object.keys(a);\n        const len = keys.length;\n        for (let i = 0; i < len; i++) {\n            const k = keys[i];\n            s[String(domain.encode(k))] = codomain.encode(a[k]);\n        }\n        return s;\n    }, domain, codomain);\n//\n// unions\n//\nclass UnionType extends Type {\n    constructor(name, is, validate, serialize, types) {\n        super(name, is, validate, serialize);\n        this.types = types;\n        this._tag = 'UnionType';\n    }\n}\nexports.UnionType = UnionType;\nexports.union = (types, name = `(${types.map(type => type.name).join(' | ')})`) => {\n    const len = types.length;\n    return new UnionType(name, (m) => types.some(type => type.is(m)), (m, c) => {\n        const errors = [];\n        for (let i = 0; i < len; i++) {\n            const type = types[i];\n            const validation = type.validate(m, exports.appendContext(c, String(i), type));\n            if (validation.isRight()) {\n                return validation;\n            }\n            else {\n                pushAll(errors, validation.value);\n            }\n        }\n        return exports.failures(errors);\n    }, types.every(type => type.encode === exports.identity)\n        ? exports.identity\n        : a => {\n            let i = 0;\n            for (; i < len - 1; i++) {\n                const type = types[i];\n                if (type.is(a)) {\n                    return type.encode(a);\n                }\n            }\n            return types[i].encode(a);\n        }, types);\n};\n//\n// intersections\n//\nclass IntersectionType extends Type {\n    constructor(name, is, validate, serialize, types) {\n        super(name, is, validate, serialize);\n        this.types = types;\n        this._tag = 'IntersectionType';\n    }\n}\nexports.IntersectionType = IntersectionType;\nfunction intersection(types, name = `(${types.map(type => type.name).join(' & ')})`) {\n    const len = types.length;\n    return new IntersectionType(name, (m) => types.every(type => type.is(m)), (m, c) => {\n        let a = m;\n        const errors = [];\n        for (let i = 0; i < len; i++) {\n            const type = types[i];\n            const validation = type.validate(a, c);\n            if (validation.isLeft()) {\n                pushAll(errors, validation.value);\n            }\n            else {\n                a = validation.value;\n            }\n        }\n        return errors.length ? exports.failures(errors) : exports.success(a);\n    }, types.every(type => type.encode === exports.identity)\n        ? exports.identity\n        : a => {\n            let s = a;\n            for (let i = 0; i < len; i++) {\n                const type = types[i];\n                s = type.encode(s);\n            }\n            return s;\n        }, types);\n}\nexports.intersection = intersection;\n//\n// tuples\n//\nclass TupleType extends Type {\n    constructor(name, is, validate, serialize, types) {\n        super(name, is, validate, serialize);\n        this.types = types;\n        this._tag = 'TupleType';\n    }\n}\nexports.TupleType = TupleType;\nfunction tuple(types, name = `[${types.map(type => type.name).join(', ')}]`) {\n    const len = types.length;\n    return new TupleType(name, (m) => arrayType.is(m) && m.length === len && types.every((type, i) => type.is(m[i])), (m, c) => {\n        const arrayValidation = arrayType.validate(m, c);\n        if (arrayValidation.isLeft()) {\n            return arrayValidation;\n        }\n        else {\n            const as = arrayValidation.value;\n            let t = as;\n            const errors = [];\n            for (let i = 0; i < len; i++) {\n                const a = as[i];\n                const type = types[i];\n                const validation = type.validate(a, exports.appendContext(c, String(i), type));\n                if (validation.isLeft()) {\n                    pushAll(errors, validation.value);\n                }\n                else {\n                    const va = validation.value;\n                    if (va !== a) {\n                        if (t === as) {\n                            t = as.slice();\n                        }\n                        t[i] = va;\n                    }\n                }\n            }\n            if (as.length > len) {\n                errors.push(exports.getValidationError(as[len], exports.appendContext(c, String(len), exports.never)));\n            }\n            return errors.length ? exports.failures(errors) : exports.success(t);\n        }\n    }, types.every(type => type.encode === exports.identity) ? exports.identity : a => types.map((type, i) => type.encode(a[i])), types);\n}\nexports.tuple = tuple;\n//\n// readonly objects\n//\nclass ReadonlyType extends Type {\n    constructor(name, is, validate, serialize, type) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this._tag = 'ReadonlyType';\n    }\n}\nexports.ReadonlyType = ReadonlyType;\nexports.readonly = (type, name = `Readonly<${type.name}>`) => new ReadonlyType(name, type.is, (m, c) => type.validate(m, c).map(x => {\n    if (process.env.NODE_ENV !== 'production') {\n        return Object.freeze(x);\n    }\n    return x;\n}), type.encode === exports.identity ? exports.identity : type.encode, type);\n//\n// readonly arrays\n//\nclass ReadonlyArrayType extends Type {\n    constructor(name, is, validate, serialize, type) {\n        super(name, is, validate, serialize);\n        this.type = type;\n        this._tag = 'ReadonlyArrayType';\n    }\n}\nexports.ReadonlyArrayType = ReadonlyArrayType;\nexports.readonlyArray = (type, name = `ReadonlyArray<${type.name}>`) => {\n    const arrayType = exports.array(type);\n    return new ReadonlyArrayType(name, arrayType.is, (m, c) => arrayType.validate(m, c).map(x => {\n        if (process.env.NODE_ENV !== 'production') {\n            return Object.freeze(x);\n        }\n        else {\n            return x;\n        }\n    }), arrayType.encode, type);\n};\n//\n// strict interfaces\n//\nclass StrictType extends Type {\n    constructor(name, is, validate, serialize, props) {\n        super(name, is, validate, serialize);\n        this.props = props;\n        this._tag = 'StrictType';\n    }\n}\nexports.StrictType = StrictType;\n/** Specifies that only the given interface properties are allowed */\nexports.strict = (props, name = `StrictType<${getNameFromProps(props)}>`) => {\n    const loose = exports.type(props);\n    return new StrictType(name, (m) => loose.is(m) && Object.getOwnPropertyNames(m).every(k => props.hasOwnProperty(k)), (m, c) => {\n        const looseValidation = loose.validate(m, c);\n        if (looseValidation.isLeft()) {\n            return looseValidation;\n        }\n        else {\n            const o = looseValidation.value;\n            const keys = Object.getOwnPropertyNames(o);\n            const len = keys.length;\n            const errors = [];\n            for (let i = 0; i < len; i++) {\n                const key = keys[i];\n                if (!props.hasOwnProperty(key)) {\n                    errors.push(exports.getValidationError(o[key], exports.appendContext(c, key, exports.never)));\n                }\n            }\n            return errors.length ? exports.failures(errors) : exports.success(o);\n        }\n    }, loose.encode, props);\n};\nconst isTagged = (tag) => {\n    const f = (type) => {\n        if (type instanceof InterfaceType || type instanceof StrictType) {\n            return type.props.hasOwnProperty(tag);\n        }\n        else if (type instanceof IntersectionType) {\n            return type.types.some(f);\n        }\n        else if (type instanceof UnionType) {\n            return type.types.every(f);\n        }\n        else if (type instanceof RefinementType) {\n            return f(type.type);\n        }\n        else {\n            return false;\n        }\n    };\n    return f;\n};\nconst findTagged = (tag, types) => {\n    const len = types.length;\n    const is = isTagged(tag);\n    let i = 0;\n    for (; i < len - 1; i++) {\n        const type = types[i];\n        if (is(type)) {\n            return type;\n        }\n    }\n    return types[i];\n};\nconst getTagValue = (tag) => {\n    const f = (type) => {\n        switch (type._tag) {\n            case 'InterfaceType':\n            case 'StrictType':\n                return type.props[tag].value;\n            case 'IntersectionType':\n                return f(findTagged(tag, type.types));\n            case 'UnionType':\n                return f(type.types[0]);\n            case 'RefinementType':\n                return f(type.type);\n        }\n    };\n    return f;\n};\nexports.taggedUnion = (tag, types, name = `(${types.map(type => type.name).join(' | ')})`) => {\n    const len = types.length;\n    const values = new Array(len);\n    const hash = {};\n    let useHash = true;\n    const get = getTagValue(tag);\n    for (let i = 0; i < len; i++) {\n        const value = get(types[i]);\n        useHash = useHash && exports.string.is(value);\n        values[i] = value;\n        hash[String(value)] = i;\n    }\n    const isTagValue = useHash\n        ? (m) => exports.string.is(m) && hash.hasOwnProperty(m)\n        : (m) => values.indexOf(m) !== -1;\n    const getIndex = useHash\n        ? tag => hash[tag]\n        : tag => {\n            let i = 0;\n            for (; i < len - 1; i++) {\n                if (values[i] === tag) {\n                    break;\n                }\n            }\n            return i;\n        };\n    const TagValue = new Type(values.map(l => JSON.stringify(l)).join(' | '), isTagValue, (m, c) => (isTagValue(m) ? exports.success(m) : exports.failure(m, c)), exports.identity);\n    return new UnionType(name, (v) => {\n        if (!exports.Dictionary.is(v)) {\n            return false;\n        }\n        const tagValue = v[tag];\n        return TagValue.is(tagValue) && types[getIndex(tagValue)].is(v);\n    }, (s, c) => {\n        const dictionaryValidation = exports.Dictionary.validate(s, c);\n        if (dictionaryValidation.isLeft()) {\n            return dictionaryValidation;\n        }\n        else {\n            const d = dictionaryValidation.value;\n            const tagValueValidation = TagValue.validate(d[tag], exports.appendContext(c, tag, TagValue));\n            if (tagValueValidation.isLeft()) {\n                return tagValueValidation;\n            }\n            else {\n                const i = getIndex(tagValueValidation.value);\n                const type = types[i];\n                return type.validate(d, exports.appendContext(c, String(i), type));\n            }\n        }\n    }, types.every(type => type.encode === exports.identity) ? exports.identity : a => types[getIndex(a[tag])].encode(a), types);\n};\n"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}

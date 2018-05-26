@@ -1,32 +1,31 @@
 {
-    "name": "ts-advanced",
-    "version": "1.0.0",
-    "description":
-        "Some experiments with advanced TS features and type-checking",
-    "private": true,
-    "main": "index.ts",
-    "dependencies": {
-        "@types/node": "^10.1.2",
-        "io-ts": "^1.1.3"
-    },
-    "devDependencies": {
-        "json-server": "^0.12.2",
-        "ts-node": "^6.0.5",
-        "typescript": "^2.8.3"
-    },
-    "scripts": {
-        "start": "json-server --watch db.json",
-        "test": "ts-node index.ts"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dmorosinotto/ts-advanced.git"
-    },
-    "keywords": ["Typescript", "type-check"],
-    "author": "Daniele Morosinotto (d.morosinotto@icloud.com)",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/dmorosinotto/ts-advanced/issues"
-    },
-    "homepage": "https://github.com/dmorosinotto/ts-advanced#readme"
+  "name": "ts-advanced",
+  "version": "1.0.0",
+  "description": "Local io-ts source code",
+  "main": "index.ts",
+  "scripts": {
+    "build": "webpack --profile --json > stats.json",
+    "postbuild": "webpack-bundle-analyzer stats.json",
+    "minimal": "rollup -c",
+    "postminimal": "open stats.html",
+    "test": "mocha -r ts-node/register test/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "immer": "^1.2.1",
+    "io-ts": "^1.0.6",
+    "io-ts-reporters": "0.0.20"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^10.0.0",
+    "mocha": "^5.1.1",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-visualizer": "^0.6.0",
+    "ts-loader": "^4.2.0",
+    "ts-node": "^6.0.2",
+    "typescript": "^2.8.3"
+  }
 }

@@ -1,0 +1,79 @@
+{
+    "good": [
+        {
+            "id": 1,
+            "name": "Pluto"
+        },
+        {
+            "id": 2,
+            "name": "Pippo",
+            "surname": "dePippis"
+        },
+        {
+            "id": 3,
+            "name": "Paperina",
+            "sex": "F"
+        },
+        {
+            "id": 4,
+            "name": "Topolino",
+            "sex": "M",
+            "dob": "1928-11-18"
+        },
+        {
+            "id": 5,
+            "name": "Giulio",
+            "surname": "Verdi",
+            "sex": "M",
+            "address": {
+                "via": "Via Roma",
+                "num": "11/b",
+                "cap": 35010
+            },
+            "programming": ["TS", "JS", "C#", "VB.Net", "VB6"]
+        }
+    ],
+    "bad": [
+        {
+            "id": -1,
+            "name": 123,
+            "surname": "name tipo errato"
+        },
+        {
+            "id": -2,
+            "name": "name ok, surname NO! numero",
+            "surname": 456
+        },
+        {
+            "id": 1,
+            "Name": "Name è case sentitive"
+        },
+        {
+            "id": 2,
+            "surname": "Manca il name"
+        },
+        {
+            "id": 3,
+            "name": "Mr",
+            "surname": "X",
+            "sex": "X"
+        },
+        {
+            "id": 4,
+            "name": "Indirizzo non valido",
+            "sex": "F",
+            "address": {
+                "via": "Corso Milano",
+                "num": "1",
+                "cap": "CAP NON NUMERICO"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Mario",
+            "surname": "Rossi",
+            "sex": "M",
+            "programming": "C*"
+        }
+    ]
+}
