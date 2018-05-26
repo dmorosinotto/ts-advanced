@@ -9,19 +9,37 @@ import { ok, ko, tap, fetch, optional, decodeToPromise, throwErr } from "./helpe
 
     type IPeople = t.TypeOf<typeof People>;
 
+    await ValidateAsync("good/1", People);
+    await ValidateAsync("good/2", People);
+    //await Validate("good/3", People);
+    //await Validate("good/4", People);
+    //await Validate("good/5", People);
+    await ValidateAsync("bad/1", People);
+    await ValidateAsync("bad/2", People);
+    await ValidateAsync("bad/-1", People);
+    await ValidateAsync("bad/-2", People);
+    //await Validate("bad/3", People);
+    //await Validate("bad/4", People);
+    //await Validate("bad/5", People);
+})();
+
+/* HELPER LOCALI PER ESEGUIRE VALIDAZIONE SYNC O ASYNC */
+async function ValidateAsync<T>(uri: string, valid: t.Type<T>) {
     try {
-        let json = await fetch("http://localhost:3000/good/1");
-        console.log("VALIDATE good/1", json);
-        let val = People.decode(json);
+        let json = await fetch("http://localhost:3000/" + uri);
+        console.log("VALIDATE", uri, "> ", json);
+        let res = valid.decode(json);
         //People.decode(json).fold(ko, ok);
-        val.isRight() ? ok("GOOD1", val.value) : throwErr(val);
+        res.isRight() ? ok(res.value) : throwErr(res);
     } catch (e) {
         ko(e);
     }
+}
 
-    fetch("http://localhost:3000/bad/1")
-        .then(tap("BAD1>"))
-        .then(json => decodeToPromise(People, json))
+function Validate<T>(uri: string, valid: t.Type<T>) {
+    return fetch("http://localhost:3000/" + uri)
+        .then(tap(`VALIDATE ${uri}> `))
+        .then(json => decodeToPromise(valid, json))
         .then(ok)
         .catch(ko);
-})();
+}
